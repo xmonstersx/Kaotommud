@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="bower_components/ionicons/css/ionicons.min.css">
+	<link rel="stylesheet" type="text/css" href="dist/css/style.css">
+</head>
+<body ng-app="blogdashApp" ng-controller="blogdashCtrl">
+	<div class="side_bar">
+		<div class="icon_wrap" ng-style="win_height">
+			<ul class="icon_bar">
+				<a href="#/" ng-class="{'side_active':isActive('/')}"><li><i class="icon ion-ios-speedometer-outline"></i></li></a>
+				<a href="#/add" ng-class="{'side_active':isActive('/add')}"><li><i class="icon ion-ios-plus-outline"></i></li></a>
+				<a href="#/list" ng-class="{'side_active':isActive('/list')}"><li><i class="icon ion-ios-list-outline"></i></li></a>
+				<a href="#/comment" ng-class="{'side_active':isActive('/comment')}"><li><i class="icon ion-ios-chatboxes-outline"></i></li></a>
+				<a href="#/media" ng-class="{'side_active':isActive('/media')}"><li><i class="icon ion-ios-play-outline"></i></li></a>
+				<a href="#/stat" ng-class="{'side_active':isActive('/stat')}"><li><i class="icon ion-ios-pie-outline"></i></li></a>
+				<a href="#/user" ng-class="{'side_active':isActive('/user')}"><li><i class="icon ion-ios-person-outline"></i></li></a>
+				<a href="#/setting" ng-class="{'side_active':isActive('/setting')}"><li><i class="icon ion-ios-gear-outline"></i></li></a>
+
+				<a href="" class="log_out"><li class="pad_lo"><i class="icon ion-ios-unlocked-outline"></i></li></a>
+			</ul>
+		</div>
+	</div>
+	<div class="content_side" ng-view></div>
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+<script type="text/javascript" src="dist/js/app.js"></script>
+</body>
+</html>
